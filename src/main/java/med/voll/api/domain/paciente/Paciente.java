@@ -29,10 +29,10 @@ public class Paciente {
     @Embedded
     private Direccion direccion;
 
-    private Boolean activo;
+    private Integer activo;
 
     public Paciente(DatosRegistroPaciente datos) {
-        this.activo = true;
+        this.activo = 1;
         this.nombre = datos.nombre();
         this.email = datos.email();
         this.telefono = datos.telefono();
@@ -54,6 +54,6 @@ public class Paciente {
     }
 
     public void eliminar() {
-        this.activo = false;
+        this.activo = 0;
     }
 }
